@@ -13,20 +13,20 @@ Implemented in Java classes.
 ## 1. Chen Diagram
 Entity-Relationship diagram using **Chen notation**.
 
-![Chen Diagram](er_diagrams/Chen/BankSystemChen.V2.png)
+![Chen Diagram](er_diagrams/сhen/BankSystemChen.V2.png)
 
 Alternative version:  
-[View V1](er_diagrams/Chen/BankSystemChen.drawio.png)
+[View V1](er_diagrams/сhen/BankSystemChen.drawio.png)
 
 ---
 
 ## 2. Crow’s Foot Diagram
 Entity-Relationship diagram using **Crow’s Foot notation**.
 
-![Crow’s Foot Diagram](er_diagrams/Crow's Foot/BankSystemCrow'sFoot.V2.png)
+![Crows Foot Diagram](er_diagrams/сrowsFoot/BankSystemCrowsFoot.V2.png)
 
 Alternative version:  
-[View V1](er_diagrams/Crow's Foot/BankSystemCrow'sFoot.drawio.png)
+[View V1](er_diagrams/сrowsFoot/BankSystemCrowsFoot.drawio.png)
 
 ---
 
