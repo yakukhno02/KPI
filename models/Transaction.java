@@ -16,13 +16,13 @@ public class Transaction {
     public Transaction() {
     }
 
-    public Transaction(String type, BigDecimal amount, String currency, Date date, Account fromAccount, Account toAccount) {
+    public Transaction(String type, BigDecimal amount, String currency, Date date, Account fromAccountId, Account toAccountId) {
         this.type = type;
         this.amount = amount;
         this.currency = currency;
         this.date = date;
-        this.fromAccountId = fromAccount;
-        this.toAccountId = toAccount;
+        this.fromAccountId = fromAccountId;
+        this.toAccountId = toAccountId;
     }
 
     public int getId() {
