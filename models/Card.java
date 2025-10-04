@@ -8,11 +8,14 @@ public class Card {
     private Date expirationDate;
     private String type;
 
-    public Card(int id, String cardNumber, Date expirationDate, String type) {
+    private int accountId;
+
+    public Card(int id, String cardNumber, Date expirationDate, String type, Integer accountId) {
         this.id = id;
         this.cardNumber = cardNumber;
         this.expirationDate = expirationDate;
         this.type = type;
+        this.accountId = accountId;
     }
 
     public int getId() {
@@ -45,5 +48,12 @@ public class Card {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public int getAccountId() {
+        return accountId;
+    }
+    public void setAccountId(int accountId) {
+        this.accountId = accountId;
     }
 }
