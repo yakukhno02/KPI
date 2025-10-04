@@ -9,12 +9,15 @@ public class Account {
     private String currency;
     private String type;
 
-    public Account(int id, String IBAN, BigDecimal balance, String currency, String type) {
+    private int customerId;
+
+    public Account(int id, String IBAN, BigDecimal balance, String currency, String type, Integer customerId) {
         this.id = id;
         this.IBAN = IBAN;
         this.balance = balance;
         this.currency = currency;
         this.type = type;
+        this.customerId = customerId;
     }
     public int getId() {
         return id;
@@ -54,5 +57,13 @@ public class Account {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public int getCustomerId() {
+        return customerId;
+    }
+
+    public void setCustomerId(int customerId) {
+        this.customerId = customerId;
     }
 }

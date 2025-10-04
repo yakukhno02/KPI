@@ -10,8 +10,8 @@ public class Transaction {
     private String currency;
     private Date date;
 
-    private Account fromAccount;
-    private Account toAccount;
+    private Account fromAccountId;
+    private Account toAccountId;
 
     public Transaction() {
     }
@@ -21,8 +21,8 @@ public class Transaction {
         this.amount = amount;
         this.currency = currency;
         this.date = date;
-        this.fromAccount = fromAccount;
-        this.toAccount = toAccount;
+        this.fromAccountId = fromAccount;
+        this.toAccountId = toAccount;
     }
 
     public int getId() {
@@ -65,19 +65,19 @@ public class Transaction {
         this.date = date;
     }
 
-    public Account getFromAccount() {
-        return fromAccount;
+    public Account getFromAccountId() {
+        return fromAccountId;
     }
 
-    public void setFromAccount(Account fromAccount) {
-        this.fromAccount = fromAccount;
+    public void setFromAccountId(Account fromAccountId) {
+        this.fromAccountId = fromAccountId;
     }
 
     public Account getToAccount() {
-        return toAccount;
+        return toAccountId;
     }
 
-    public void setToAccount(Account toAccount) {
-        this.toAccount = toAccount;
+    public void setToAccount(Account toAccountId) {
+        this.toAccountId = toAccountId;
     }
 }
