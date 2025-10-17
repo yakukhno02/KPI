@@ -1,0 +1,43 @@
+@startuml
+title Use Case Diagram – Online Banking System
+left to right direction
+scale 1.3
+
+actor Customer
+actor "Bank Employee" as Employee
+
+(Register / Login)
+(View Account Details)
+(View Transaction History)
+(Make Transaction)
+(Request Card)
+(Apply for a Loan)
+(Repay Loan)
+(Logout)
+
+(Review Card Request)
+(Approve / Reject Card)
+(Review Loan Application)
+(Approve / Reject Loan)
+
+Customer --> (Register / Login)
+Customer --> (View Account Details)
+Customer --> (View Transaction History)
+Customer --> (Make Transaction)
+Customer --> (Request Card)
+Customer --> (Apply for a Loan)
+Customer --> (Repay Loan)
+Customer --> (Logout)
+
+Employee --> (Review Card Request)
+Employee --> (Approve / Reject Card)
+Employee --> (Review Loan Application)
+Employee --> (Approve / Reject Loan)
+
+(Request Card) --> (Review Card Request) : <<include>>
+(Apply for a Loan) --> (Review Loan Application) : <<include>>
+
+(Approve / Reject Card) --> (Review Card Request) : <<extend>>
+(Approve / Reject Loan) --> (Review Loan Application) : <<extend>>
+(View Transaction History) --> (View Account Details) : <<extend>>
+@enduml
