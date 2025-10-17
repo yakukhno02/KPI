@@ -1,6 +1,6 @@
 # KPI Labs — Simple Banking System
 
-### 🔗 Навігація між лабораторними
+### Навігація між лабораторними
 - [**Lab 1 — Entity Relationship Diagram (ERD)**](#kpi-lab1-entity-relationship)
 - [**Lab 2 — Use Case Diagram (UML)**](#kpi-lab2-use-case-diagram)
 
@@ -70,7 +70,8 @@ The ER model represented as Java classes.
 
 ## 2. Декларативна модель (PlantUML)
 
-Файл: [use_case_diagram.puml](use_case/plantUML/BankSystemUseCase.puml)
+Файл: [use_case_diagram.puml](use_case/plantUML/BankSystemUseCase.puml) 
+![use_case_diagram.png](use_case/plantUML/BankSystemUseCase.png)
 
 ## 3. Функціональні вимоги
 
