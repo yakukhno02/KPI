@@ -1,0 +1,34 @@
+sequenceDiagram
+    actor Customer
+    participant Bank as e-Banking
+    actor Employee as BankEmployee
+    participant Bureau as CreditBureau
+
+    Customer ->> Bank: submitLoanApplication()
+    activate Bank
+
+    Bank ->> Bureau: fetchCreditScore(customerId)
+    activate Bureau
+    Bureau -->> Bank: returnCreditScore(score)
+    deactivate Bureau
+
+    alt autoApproval
+        Bank ->> Customer: notifyCustomer("Loan approved")
+    else lowScore
+        Bank ->> Customer: notifyCustomer("Loan rejected")
+    end
+
+    opt manualReviewRequired
+        Bank ->> Employee: requestApproval(applicationId)
+        activate Employee
+        Employee -->> Bank: approvalResult(result)
+        deactivate Employee
+
+        alt approvedByEmployee
+            Bank ->> Customer: notifyCustomer("Loan approved")
+        else rejectedByEmployee
+            Bank ->> Customer: notifyCustomer("Loan rejected")
+        end
+    end
+
+    deactivate Bank
