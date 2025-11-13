@@ -1,8 +1,9 @@
 # KPI Labs — Simple Banking System
 
 ### Навігація між лабораторними
-- [**Lab 1 — Entity Relationship Diagram (ERD)**](#kpi-lab1-entity-relationship)
-- [**Lab 2 — Use Case Diagram (UML)**](#kpi-lab2-use-case-diagram)
+- [**Lab 1 - Entity Relationship Diagram (ERD)**](#kpi-lab1-entity-relationship)
+- [**Lab 2 - Use Case Diagram (UML)**](#kpi-lab2-use-case-diagram)
+- [**Lab 3 - Sequence Diagram**](#kpi-lab3-sequence-diagram)
 
 ## KPI Lab1 (Entity Relationship)
 
@@ -140,3 +141,19 @@ The ER model represented as Java classes.
 | UC10 | Approve / Reject Loan |
 | UC11 | Repay Loan |
 | UC12 | Logout |
+
+## KPI Lab3 (Sequence Diagram)
+
+## Зміст
+1. Графічна діаграма (Draw.io)
+2. Декларативна модель (Mermaid)
+
+## 1. Графічна діаграма (Draw.io)
+
+![BankSystemSequenceDiagram.png](sequence_diagram/BankSystemSequenceDiagram.png)
+
+## 2. Декларативна модель (Mermaid) 
+
+[BankSystemSeq.mmd](sequence_diagram/BankSystemSeq.mmd)
+
+![BankSystemSeq.png](sequence_diagram/BankSystemSeq.png)
