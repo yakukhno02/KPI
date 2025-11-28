@@ -1,0 +1,44 @@
+@startuml
+title Loan Application Activity Diagram
+
+|Customer|
+start
+:Fill loan form;
+:Submit loan form;
+
+|e-Banking|
+:Validate application data;
+:Request credit score;
+
+|Credit Bureau|
+:Check credit history;
+:Return credit score;
+
+|e-Banking|
+if (Score sufficient?) then (Yes)
+  :Notify customer\nApproved - Auto;
+  stop
+else (No)
+  if (Score too low?) then (Yes)
+    :Notify customer\nRejected - Auto;
+    stop
+  else (No)
+    :Send for manual review;
+
+    |Bank Employee|
+    :Review application;
+
+    if (Approved manually?) then (Yes)
+      |e-Banking|
+      :Notify customer\nApproved - Manual;
+      stop
+    else (No)
+      |e-Banking|
+      :Notify customer\nRejected - Manual;
+      stop
+    endif
+
+  endif
+endif
+
+@enduml
