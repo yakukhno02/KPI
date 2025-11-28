@@ -4,6 +4,7 @@
 - [**Lab 1 - Entity Relationship Diagram (ERD)**](#kpi-lab1-entity-relationship)
 - [**Lab 2 - Use Case Diagram (UML)**](#kpi-lab2-use-case-diagram)
 - [**Lab 3 - Sequence Diagram**](#kpi-lab3-sequence-diagram)
+- [**Lab 4 - Activity/BPMN**](#kpi-lab4-activitybpmn)
 
 ## KPI Lab1 (Entity Relationship)
 
@@ -157,3 +158,24 @@ The ER model represented as Java classes.
 [BankSystemSeq.mmd](sequence_diagram/BankSystemSeq.mmd)
 
 ![BankSystemSeq.png](sequence_diagram/BankSystemSeq.png)
+
+## KPI Lab4 (Activity/BPMN)
+
+## Зміст
+1. [Activity diagram](#1-activity-diagram)
+2. [BPMN diagram](#2-bpmn-diagram)
+
+## 1. Activity diagram
+
+Draw.io
+![BankSystemActivity.jpg](activity_diagram/BankSystemActivity.jpg)
+
+PlantUML
+[BankSystemActivity.puml](activity_diagram/BankSystemActivity.puml)
+![BankSystemActivity.png](activity_diagram/BankSystemActivity.png)
+
+## 2. BPMN diagram
+
+Draw.io
+![BankSystemBPMN.jpg](BPMN_diagram/BankSystemBPMN.jpg)
+
