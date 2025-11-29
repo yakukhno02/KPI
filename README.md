@@ -168,14 +168,14 @@ The ER model represented as Java classes.
 ## 1. Activity diagram
 
 Draw.io
-![BankSystemActivity.jpg](activity_diagram/BankSystemActivity.jpg)
+![BankSystemActivityv2.jpg](activity_diagram/BankSystemActivityv2.jpg)
 
 PlantUML
 [BankSystemActivity.puml](activity_diagram/BankSystemActivity.puml)
-![BankSystemActivity.png](activity_diagram/BankSystemActivity.png)
+![BankSystemActivityv2.png](activity_diagram/BankSystemActivityv2.png)
 
 ## 2. BPMN diagram
 
 Draw.io
-![BankSystemBPMN.jpg](BPMN_diagram/BankSystemBPMN.jpg)
+![BankSystemBPMNv2.jpg](BPMN_diagram/BankSystemBPMNv2.jpg)
 
