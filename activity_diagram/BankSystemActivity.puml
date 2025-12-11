@@ -16,10 +16,12 @@ start
 
 |e-Banking|
 if (Score sufficient?) then (Yes)
+  :Record loan decision\n(Approved);
   :Notify customer\nApproved - Auto;
   stop
 else (No)
   if (Score too low?) then (Yes)
+    :Record loan decision\n(Rejected);
     :Notify customer\nRejected - Auto;
     stop
   else (No)
@@ -29,10 +31,14 @@ else (No)
     :Review application;
 
     if (Approved manually?) then (Yes)
+      |Bank Employee|
+      :Add loan decision\n(Approved - Manual);
       |e-Banking|
       :Notify customer\nApproved - Manual;
       stop
     else (No)
+      |Bank Employee|
+      :Add loan decision\n(Rejected - Manual);
       |e-Banking|
       :Notify customer\nRejected - Manual;
       stop
