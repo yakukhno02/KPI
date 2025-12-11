@@ -5,6 +5,7 @@
 - [**Lab 2 - Use Case Diagram (UML)**](#kpi-lab2-use-case-diagram)
 - [**Lab 3 - Sequence Diagram**](#kpi-lab3-sequence-diagram)
 - [**Lab 4 - Activity/BPMN**](#kpi-lab4-activitybpmn)
+- [**Lab 5 - Component**](#kpi-lab5-component-diagram)
 
 ## KPI Lab1 (Entity Relationship)
 
@@ -179,3 +180,11 @@ PlantUML
 Draw.io
 ![BankSystemBPMNv2.jpg](BPMN_diagram/BankSystemBPMNv2.jpg)
 
+## KPI Lab5 (Component Diagram)
+
+Draw.io
+![Component.drawio.png](component_diagram/Component.drawio.png)
+
+PlantUML
+[component.puml](component_diagram/component.puml)
+![component.png](component_diagram/component.png)

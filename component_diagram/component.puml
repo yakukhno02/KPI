@@ -1,0 +1,102 @@
+@startuml
+title e-Banking System – Component Diagram
+
+skinparam linetype ortho
+skinparam componentStyle uml2
+skinparam packageStyle rectangle
+skinparam defaultTextAlignment center
+skinparam backgroundColor white
+
+skinparam nodesep 80
+skinparam ranksep 80
+
+left to right direction
+
+package "Client Side" {
+    component "Client Application" as ClientApp
+    interface REST_API
+}
+
+ClientApp -right- REST_API
+
+package "Gateway Layer" {
+    component Gateway
+    component "JSON Validator" as Validator
+}
+
+REST_API -right- Gateway
+Gateway -down- Validator
+
+package "SpringBoot Application" {
+
+    package "Modules" {
+
+        package "Controllers" as PkgCtrl {
+            component AuthController
+            component TransactionController
+            component LoanController
+        }
+
+        interface AuthAPI
+        interface TransAPI
+        interface LoanAPI
+
+        Gateway -right- AuthAPI
+        Gateway -right- TransAPI
+        Gateway -right- LoanAPI
+
+        AuthAPI -down- AuthController
+        TransAPI -down- TransactionController
+        LoanAPI -down- LoanController
+
+        package "Services" as PkgSvc {
+            component AuthService
+            component TransactionService
+            component LoanService
+        }
+
+        AuthController -right- AuthService
+        TransactionController -right- TransactionService
+        LoanController -right- LoanService
+
+
+        package "Repositories" as PkgRepo {
+            component AuthRepo
+            component TransactionRepo
+            component LoanRepo
+        }
+
+        AuthService -right- AuthRepo
+        TransactionService -right- TransactionRepo
+        LoanService -right- LoanRepo
+
+        interface JDBC_JPA
+
+        AuthRepo -right- JDBC_JPA
+        TransactionRepo -right- JDBC_JPA
+        LoanRepo -right- JDBC_JPA
+    }
+}
+
+PkgCtrl -[hidden]- PkgSvc
+PkgSvc -[hidden]- PkgRepo
+
+database "PostgreSQL" as DB
+JDBC_JPA -down- DB
+
+package "External Integrations" {
+    component NotificationService
+    component CreditBureau
+}
+
+interface Notify
+interface CreditScore
+
+LoanService --> Notify
+LoanService --> CreditScore
+
+Notify -right- NotificationService
+CreditScore -right- CreditBureau
+PkgSvc -[hidden]down- "External Integrations"
+
+@enduml
